@@ -1,0 +1,44 @@
+
+
+.border{
+
+    border: 1px solid black;
+}
+
+.header,.aside,.section,.main,.footer{
+
+    width: 30%;
+
+    height: 50px;
+}
+
+.header{
+
+    margin-left: 400px;
+
+}
+
+.aside{
+
+    margin-right: auto;
+
+    margin-top: 350px;
+}
+
+.section{
+
+    margin-left: auto;
+}
+
+.main{
+
+    margin-left: 450px;
+}
+
+
+.footer{
+
+    margin-top: 450px;
+
+    margin-left: 400px;
+}

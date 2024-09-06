@@ -1,0 +1,15 @@
+
+.border{
+
+    border: 1px solid black;
+}
+
+.parent{
+
+    width: 75%;
+
+    height: 200px;
+
+    background-color: aqua;
+
+}

@@ -1,0 +1,26 @@
+
+.border{
+
+    border: 1px black solid;
+}
+
+.headr,.footer{
+
+    width: 30%;
+
+    height: 50px;
+
+    /* padding-left: 10px; */
+}
+
+.header{
+
+    margin-left: 400px;
+}
+
+.footer{
+
+    margin-top: 450px;
+
+    margin-left: 400px;
+}

@@ -1,0 +1,52 @@
+
+body{
+    background-color: black;
+
+}
+
+
+
+
+#main{
+
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#second{
+    color: yellow;
+}
+
+
+
+/* first,third text color green  */
+
+/* secoiond fourth blue */
+
+/* success=>green
+danger=>red
+primary=>blue
+warning=>yellow
+*/
+
+.text-success{
+    color: green;
+}
+
+.text-danger{
+    color: red;
+}
+
+.text-primary{
+    color: blue;
+}
+
+
+
+
+/* css  */
+/* 1 inline */
+/* 2 internal */
+/* external */
+/* basic selectors tagname  .class Selector */

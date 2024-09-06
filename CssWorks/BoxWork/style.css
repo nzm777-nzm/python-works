@@ -1,0 +1,39 @@
+
+.border{
+
+    border: 1px black solid;
+}
+
+.parent{
+
+    width: 400px;
+
+    height: 300px;
+}
+
+.child{
+
+    width: 150px;
+
+    height: 100px;
+}
+
+.bg-success{
+
+    background-color: green;
+}
+
+.bg-warning{
+
+    background-color: yellow;
+}
+
+.bg-info{
+
+    background-color: red;
+}
+
+.bg-purple{
+
+    background-color: purple;
+}
