@@ -16,7 +16,7 @@ class student:
     
     address:str
     
-    def set_student(self,id,age,gender,name,course,contact,address):
+    def __init__(self,id,age,gender,name,course,contact,address):
         
         self.id=id
         
@@ -34,12 +34,16 @@ class student:
         
     def display_student(self):
         
-        print(self.id,self.name)
+        print(self.id,self.name,self.address,self.contact,self.gender,self.age,self.course)
+
+    def __str__(self):
+        
+        return self.name
         
 #creating objects
 
-student_instance=student()
+student_instance=student(11,15,"male","nzm","python",9758587,"line 7")
 
-student_instance.set_student(11,15,"male","nzm","python",9758587,"line 7")
+# student_instance.display_student()
 
-student_instance.display_student()
+print(student_instance)
