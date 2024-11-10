@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%load static%}
+
+{%block main_block%}
+
+<div class="container">
+    <form action="" method="post">
+
+        <img src="{%static 'images/add.png'%}" alt="" width="100px" height="100px">
+        {%csrf_token%}
+
+        {{form}}
+
+        <button type="submit">register</button>
+
+        NEW USER? <a href="{%url 'register'%}">add account</a>
+    </form>
+</div>
+
+{%endblock%}

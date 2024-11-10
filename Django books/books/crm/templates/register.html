@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<div class="container">
+    <form action="" method="post">
+        {%csrf_token%}
+
+        {{form}}
+
+        <button type="submit">register</button>
+
+        already have account? <a href="{%url 'signin'%}">login</a>
+    </form>
+</div>
+
+{%endblock%}

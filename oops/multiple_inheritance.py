@@ -1,5 +1,4 @@
 
-
 class grandparent:
     
     def m1(self):

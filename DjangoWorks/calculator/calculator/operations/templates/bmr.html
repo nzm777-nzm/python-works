@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4 border border-4 shadow p-5">
+            <form action="" method="post">
+                <h3 class="text-center">BMR FORM</h3>
+
+                {%csrf_token%}
+                {{form}}
+                <div class="mt-4">
+                <button type="submit">find</button>
+            </div>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    {{result}}
+</div>
+
+{%endblock%}

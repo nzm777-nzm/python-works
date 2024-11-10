@@ -18,9 +18,30 @@ class editor(ABC):
     
 class vscode(editor):
     
-   def open(self):
-       
-       print("opened")
+    
+    def open(self):
+        
+        print("opened")
+        
+    def execute(self):
+        
+        print("executed")
+        
+    def debug(self):
+        
+        print("debug")
+        
+
+vs_code=vscode()
+
+vs_code.open()
+
+vs_code.execute()
+
+vs_code.debug()
+    
+   
+  
     
     
     

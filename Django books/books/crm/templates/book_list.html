@@ -1,0 +1,60 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+
+<div class="container mt-3">
+
+  <li class="nav item mt-1 my-3">
+    
+    <a href="{%url 'signout'%}" class="btn btn-dark">{{request.user}} logout</a>
+  </li>
+</ul>
+
+
+ 
+
+  <form class="d-flex" role="search" action="{%url 'book-list'%}">
+
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="filter">
+  
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+
+  <ul>
+    
+   
+
+  <div class="row mt-4">
+    {%for b in data%}
+
+    <div class="col-3  mb-3">
+
+      <div class="card" style="width: 100%;">
+        {%if b.picture%}
+
+        <img src="{{b.picture.url}}" class="card-img-top" alt="...">
+
+        {%endif%}
+        <div class="card-body">
+          <h5 class="card-title">name: {{b.name}}</h5>
+          <p class="card-text">price: {{b.price}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">author: {{b.author}}</li>
+          <li class="list-group-item">category: {{b.category}}</li>
+        </ul>
+        <div class="card-body">
+          <a href="{%url 'book-detail' b.id%}" class="card-link">View</a>
+
+          <a href="{%url 'book-delete' b.id%}" class="card-link">delete</a>
+
+          <a href="{%url 'book-update' b.id%}" class="card-link">update</a>
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+</div>
+
+{%endblock%}

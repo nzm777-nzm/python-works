@@ -1,0 +1,57 @@
+ORM QUERY
+
+class Books(models.Model):
+    
+    name=models.CharField(max_length=100)
+    
+    price=models.PositiveIntegerField()
+    
+    author=models.CharField(max_length=100)
+    
+    category=models.CharField(max_length=100)
+    
+
+ORM query for creating a resource
+
+modelname.objects.create(field=value,field2=value)
+
+    Books.objects.create(name="romeo juliet",
+                            price=3500,
+                            author="william shakespear",
+                            category="love",
+                            )
+
+=>ORM query for fetching all records
+
+    =>qs=modelname.objects.all()
+
+    =>qs=Books.objects.all()
+
+=>qrm query for filtering Books
+
+    >qs=Modelname.objects.filter(field=value)
+
+    for fetch category
+
+    >qs=Books.objects.filter(category="romance")
+
+    for fetch author
+
+    >qs=Books.objects.filter(author="shakespear")
+
+    #filter Books whose price < 3000
+
+    # field lookups
+
+    #< __lt
+    #> __gt
+    #<= __lte
+    >= __gte
+
+
+    #field notequal
+
+    #exclude()
+
+
+

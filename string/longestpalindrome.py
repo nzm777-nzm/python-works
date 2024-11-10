@@ -10,7 +10,7 @@ for i in range(0,len(text)):
         
         current_palindrome=text[left:right+1]
         
-        print(current_palindrome)
+        
         
         left=left-1
         

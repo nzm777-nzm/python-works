@@ -1,5 +1,6 @@
 text="racecar"
 
+
 longest_palindrome=""
 
 for i in range(0,len(text)):
@@ -20,6 +21,27 @@ for i in range(0,len(text)):
         
         right=right+1
 
-print(longest_palindrome)            
+print(longest_palindrome)
+
+    
+    
+
+    
+   
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+       
             
             

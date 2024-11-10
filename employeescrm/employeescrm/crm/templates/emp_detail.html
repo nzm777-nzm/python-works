@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{%static 'css/style.css'%}">
+
+
+</head>
+
+<body>
+
+  {%if messages%}
+
+  {%for m in messages%}
+
+  {{m}}
+
+  {%endfor%}
+
+  {%endif%}
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        {%if data.picture%}
+
+        <img src="{{data.picture.url}}" class="h-100 w-100 rounded-start" alt="" width="100px" height="100px">
+
+        {%endif%}
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{data.name}}</h5>
+          <p class="card-text">{{data.salary}}</p>
+          <p class="card-text">{{data.department}}</p>
+          <p class="card-text">{{data.gender}}</p>
+          <p class="card-text"><small class="text-body-secondary"></small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

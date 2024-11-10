@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%load static%}
+
+{%block main_block%}
+
+
+<form action="" method="post" enctype="multipart/form-data">
+
+    <img src="{%static 'images/add.png'%}" alt="" width="100px" height="100px">
+    {%csrf_token%}
+
+    {{form.as_p}}
+
+    <div class="text-center mt-3">
+        <button type="submit">submit</button>
+    </div>
+
+</form>
+
+{%endblock%}

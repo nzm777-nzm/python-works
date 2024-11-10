@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+
+<body>
+
+    <h1>add emp</h1>
+
+    {%if messages%}
+
+    {%for m in messages%}
+
+    {{m}}
+
+    {%endfor%}
+
+    {%endif%}
+
+    <div class="container">
+
+        <form action="" method="post" enctype="multipart/form-data">
+
+            <img src="{%static 'images/add.png'%}" alt="" width="100px" height="100px">
+            
+            {%csrf_token%}
+
+
+
+            {{form}}
+
+            <button type="submit">add</button>
+
+        </form>
+
+
+       
+
+    </div>
+
+</body>
+
+</html>

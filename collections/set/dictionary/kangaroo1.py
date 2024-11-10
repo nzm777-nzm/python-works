@@ -30,5 +30,10 @@ for ch in target_word:
         break
 
 print(is_kangaroo)
+
+
+
+
+
     
     

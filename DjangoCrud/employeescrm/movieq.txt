@@ -1,0 +1,91 @@
+Django Database Table Creation Question
+
+You are tasked with creating a movie database in Django. The movie model should have the following fields:
+
+- id (Integer Field, Primary Key)
+- title (String Field)
+- genre (String Field)
+- runtime (Integer Field representing the duration in minutes)
+- language (String Field)
+- year (Integer Field representing the release year)
+- director (String Field)
+
+Instructions:
+
+1. Write the steps required to create the Django model for the Movie table with the specified fields.
+2. How will you apply the changes to the database after creating the model?
+3. Write the code for the Django model.
+4. Mention how you would query all movies directed by a specific director.
+
+
+class Movies(models.Model):
+    
+    title=models.CharField(max_length=100)
+    
+    genre=models.CharField(max_length=100)
+    
+    runtime=models.PositiveSmallIntegerField()
+    
+    language=models.CharField(max_length=100)
+    
+    year=models.PositiveSmallIntegerField()
+    
+    director=models.CharField(max_length=100)
+    
+    def __str__(self):
+        
+        return self.title
+
+
+        query for creating a new Movie
+
+
+    Movies.objects.create(title="arm",genre"action",runtime=150,language="malayalam",year=2024,director="jithinlal")
+
+    query for fetching all movies
+
+    qs=movie.objects.all()
+
+    query for fetching movie with id =1
+
+    qs=Movies.objects.get(id=1)
+
+    query for fetching malayalam Movie
+
+    qs=Movies.objects.filter(language="malayalam")
+
+
+    =>malayalam movies with runtime > 140
+
+
+    qs=Movies.objects.filter(language="malayalam",runtime__gt=140)
+
+
+    movie title starts with "a"
+
+    qs=Movie.objects.filter(title__startswith="a")
+
+    qs=Movie.objects.filter(title__icontains="an")
+
+
+    qs=movie.objects.all().values("department").distinct()
+
+
+    =>Aggregate=(sum,max,min,avg,count)
+
+    from django.db.models import Max
+
+    qs=Employee.objects.all().values("salary).Aggregate(Max("salary))
+
+       from django.db.models import Min
+
+    qs=Employee.objects.all().values("salary).Aggregate(Min("salary))
+
+
+
+
+
+
+
+
+

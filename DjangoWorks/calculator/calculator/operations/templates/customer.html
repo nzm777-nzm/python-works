@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<div class="container">
+    <form action="" method="post">
+
+        <div class="row">
+            <div class="col-6">
+                {{form.first_name.label_tag}}
+                {{form.first_name}}
+            </div>
+            <div class="col-6">
+                {{form.last_name.label_tag}}
+                {{form.last_name}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {{form.address.label_tag}}
+                {{form.address}}
+            </div>
+        </div>
+       <div class="row">
+        <div class="col-6">
+            {{form.pincode.label_tag}}
+            {{form.pincode}}
+        
+        </div>
+        <div class="col-6">
+            {{form.city.label_tag}}
+            {{form.city}}
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-12">
+            {{form.postal.label_tag}}
+            {{form.postal}}
+        </div>
+       </div>
+    </form>
+</div>
+
+{%endblock%}

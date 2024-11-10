@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4  border border-3 shadow mt-5 p-5 ">
+            <form action="" method="post">
+                {%csrf_token%}
+                {{form}}
+                <div class="text-center mt-4">
+                    <button type="submit">find</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    {{result}}
+</div>
+
+{%endblock%}

@@ -1,0 +1,28 @@
+
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<div class="container">
+
+    <form action="" method="post">
+
+        {%csrf_token%}
+
+        <div>
+            <label for="">enetr num1</label>
+            <input type="text" name="num1">
+        </div>
+        <div>
+            <label for="">enter num2</label>
+            <input type="text" name="num2">
+        </div>
+        <div>
+            <button type="submit">add</button>
+        </div>
+    </form>
+
+    {{result}}
+
+</div>
+{%endblock%}

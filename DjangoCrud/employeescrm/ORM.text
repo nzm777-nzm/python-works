@@ -1,0 +1,71 @@
+ORM QUERY
+
+class Employee(models.Model):
+    
+    name=models.CharField(max_length=100)
+    
+    age=models.PositiveIntegerField()
+    
+    gender=models.CharField(max_length=100)
+    
+    department=models.CharField(max_length=100)
+    
+    salary=models.PositiveIntegerField()
+    
+    address=models.TextField()
+    
+    qualification=models.CharField(max_length=100,null=True)
+
+ORM query for creating a resource
+
+modelname.objects.create(field=value,field2=value)
+
+    Employee.objects.create(name="nzm",
+                            age=21,
+                            gender="male",
+                            department="hr",
+                            salary=40000,
+                            address="street4",
+                            qualification="mca"
+                            mobile=6767
+                            )
+
+=>ORM query for fetching all records
+
+    =>qs=modelname.objects.all()
+
+    =>qs=Employee.objects.all()
+
+=>qrm query for filtering Employees
+
+    >qs=Modelname.objects.filter(field=value)
+
+    for fetch gender male
+
+    >qs=Employee.objects.filter(gender="male")
+
+    for fetch department
+
+    >qs=Employee.objects.filter(department="hr")
+
+    #filter employees whose salary < 40000
+
+    # field lookups
+
+    #< __lt
+    #> __gt
+    #<= __lte
+    >= __gte
+
+
+    #field notequal
+
+    #exclude()
+
+ORM query for updating employees
+
+=>Modelname.objects.filter(field=value).update(field=value,field=value)
+
+Employee.objects.filter(id=4).update(age=27,salary=40000)
+
+

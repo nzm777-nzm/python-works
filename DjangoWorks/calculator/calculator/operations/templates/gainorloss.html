@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<div class="container">
+
+    <form action="" method="post">
+
+        {%csrf_token%}
+        {{form}}
+        <button type="submit">find</button>
+    </form>
+</div>
+
+
+{%if result%}
+  <h1>{{result}}</h1>
+{%endif%}
+
+{%if result2%}
+<h1>{{result2}}</h1>
+{%endif%}
+
+
+{%endblock%}
